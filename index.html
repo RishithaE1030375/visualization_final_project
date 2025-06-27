@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Visualization of Trips.json</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="js/scripts.js" />
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+  <style>
+    #pieChart {
+      padding-top: 40px;
+    }
+    .description {
+      padding: 10px;
+      background-color: #f4f4f4;
+      font-size: 16px;
+      border-bottom: 1px solid #ccc;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .student-info {
+      font-size: 14px;
+      color: white;
+      text-align: right;
+    }
+    .highlight-arc {
+      stroke: black;
+      stroke-width: 2px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Data Visualization of Taxi Trips</h1>
+      <div class="student-info">
+        <p><strong>Student Name:</strong> Rishitha Erupaka </p>
+        <p><strong>ID:</strong> 1030375</p>
+      </div>
+    </div>
+  </header>
+  <div class="description">
+    <p>
+      Welcome to the interactive trip data visualization dashboard! 
+      This page helps you analyze and explore taxi movement patterns in a dynamic and intuitive way, similar to how modern logistics or fleet management platforms operate.
+    </p>
+  </div>
+  <h2 id="text">How to Explore the Trip Data Visualization</h2>
+<details open>
+  <summary id="text">Bar Chart - Taxi Activity Overview</summary>
+  <p id="text">The bar chart displays Taxi IDs on the X-axis and the number of trips on the Y-axis. Clicking on any bar will:</p>
+  <ul>
+    <li>Highlight the selected taxi ID in orange.</li>
+    <li>Filter the map to show only the routes taken by that taxi.</li>
+    <li>Displays a pie chart summarizing trip durations for that taxi.</li>
+  </ul>
+</details>
+<details>
+  <summary id="text">Interactive Map - Trip Route Visualizer</summary>
+  <p id="text">The interactive map dynamically shows trip routes on a real-world map. When a taxi is selected:</p>
+</details>
+<details>
+  <summary id="text">Pie Chart - Trip Duration Breakdown</summary>
+  <p id="text">Beside the map, the pie chart displays individual trip durations for the selected taxi:</p>
+</details>
+  &nbsp;
+  <div class="vizContainer">
+    <div class="mainMap">
+      <div id="map"></div>
+      <div id="pieChart" style="font-weight: bold; margin-left: 8px;"></div>
+    </div>
+    <div class="mainBar"> 
+      <div id="svgContainer"></div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+  <footer class="py-5 bg-dark">
+        <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Rishitha Erupaka</p></div>
+  </footer>
+</body>
+</html>

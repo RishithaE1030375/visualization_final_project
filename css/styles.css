@@ -1,0 +1,9 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #fff; } header { background: #8B008B; color: white; text-align: center; padding: 10px; font-size: 24px; }
+#map {
+  height: 600px;
+  margin-left: 20px;
+}
+#text {
+  padding-top: 10px;
+  margin-left: 8px;
+}
