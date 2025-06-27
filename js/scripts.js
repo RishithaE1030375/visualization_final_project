@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   }).addTo(map);
 
   const carIcon = L.icon({
-  iconUrl: 'assets/taxi.png',
+  iconUrl: 'Assets/taxi.png',
   iconSize: [32, 32],
   iconAnchor: [16, 16]
 });
