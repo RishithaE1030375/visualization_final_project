@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   }).addTo(map);
 
   const carIcon = L.icon({
-  iconUrl: 'assets/car.png',
+  iconUrl: 'assets/taxi.png',
   iconSize: [32, 32],
   iconAnchor: [16, 16]
 });
@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     iconAnchor: [12, 24]
   });
 
-  const response = await fetch("trips.json");
+  const response = await fetch("js/trips.json");
   const tripData = await response.json();
 
   let geoJsonLayer = L.geoJSON(tripData, {
